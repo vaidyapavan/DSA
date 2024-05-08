@@ -1,0 +1,34 @@
+package dsa;
+
+
+
+class fobonacci
+{
+	int n=10;
+	
+	void fobonacci_series()
+	{
+	
+		int sum=0;
+		int a=0;
+		int b=1;
+		for(int i=0;i<=n;i++)
+		{
+			sum=a+b;
+			a=b;
+			b=sum;
+			System.out.print(sum+ " ");
+			
+		}
+		
+	}
+}
+public class Fibonacci_series {
+
+	public static void main(String[] args) {
+		fobonacci obj = new fobonacci();
+		obj.fobonacci_series();
+
+	}
+
+}
