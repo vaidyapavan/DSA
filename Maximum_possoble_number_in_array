@@ -1,0 +1,49 @@
+import java.util.Arrays;
+
+class array {
+    int arr[] = {7, 89, 3, 2, 6, 4, 456, 12};
+    int n = arr.length;
+
+    void swap() {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] < arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    int compare() {
+        String[] arrayAsString = new String[n];
+        for (int i = 0; i < n; i++) {
+            arrayAsString[i] = String.valueOf(arr[i]);
+        }
+        
+        for (int i = 0; i < n - 1; i++) {
+            String s1 = arrayAsString[i] + arrayAsString[i + 1];
+            String s2 = arrayAsString[i + 1] + arrayAsString[i];
+            
+            for (int k = 0; k < s1.length(); k++) {
+                if (s1.charAt(k) > s2.charAt(k)) {
+                    return Integer.parseInt(s1);
+                } else if (s1.charAt(k) < s2.charAt(k)) {
+                    return Integer.parseInt(s2);
+                }
+            }
+        }
+        return Integer.parseInt(arrayAsString[0]);
+    }
+}
+
+public class Maximum_possoble_number_in_array {
+    public static void main(String[] args) {
+        array obj = new array();
+        obj.swap();
+
+        int max = obj.compare();
+        System.out.println("Maximum possible number is: " + max);
+    }
+}
