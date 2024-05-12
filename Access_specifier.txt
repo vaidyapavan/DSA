@@ -1,0 +1,52 @@
+package dsa;
+
+
+class animal
+{
+	
+	int a=40;
+	int b=90;
+	 public int sum=a+b;
+	 
+	 void method()
+	 {
+		 System.out.println("this method function is called from the child class");
+	 }
+	animal()
+	{
+		
+		System.out.println("This is parent class");
+		
+	}
+	
+	
+}
+class dog extends animal
+{
+	dog()
+	{
+		super.method();
+		System.out.println("sum is: "+sum);
+		System.out.println("This is inner class ");
+		
+		
+	}
+	
+	
+}
+
+
+
+
+
+public class Access_specifier {
+
+	public static void main(String[] args) {
+		
+		 dog obj = new  dog();
+		 
+		
+
+	}
+
+}
