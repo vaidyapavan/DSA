@@ -1,0 +1,32 @@
+package dsa;
+import java.util.*;
+
+
+class function
+{
+     void check(int n)
+	{
+		if(n%2==0)
+		{
+			System.out.println( n+": is even");
+			
+		}
+		else
+		{
+			System.out.println( n+": is  not even");	
+		}
+		
+	}
+}
+public class Function_example1 {
+
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		function obj= new function();
+		obj.check(9);
+		
+		
+
+	}
+
+}
