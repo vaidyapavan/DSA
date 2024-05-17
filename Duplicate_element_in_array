@@ -1,0 +1,34 @@
+package dsa;
+
+
+
+
+class duplicate_element
+{
+	
+	int arr[]= {6,89,2,3,2,4,67,9,6,90,89};
+	int n=arr.length;
+	void check_duplicate()
+	{
+		for(int i=0;i<n;i++)
+		{
+			for(int j=i+1;j<n;j++)
+			{
+				if(arr[i]==arr[j])
+				{
+					System.out.println("Duplicate element is: "+ arr[j]);
+				}
+			}
+		}
+	}
+}
+public class array_Duplicate_element {
+
+	public static void main(String[] args) {
+		duplicate_element obj = new duplicate_element();
+		obj.check_duplicate();
+		
+
+	}
+
+}
