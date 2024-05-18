@@ -1,0 +1,28 @@
+package dsa;
+
+class StringReverse {
+    String str = "pavan vaidya";
+    int n = str.length();
+    char[] array = str.toCharArray();
+
+    void reverse() {
+        
+        int j = n - 1; 
+        for (int i = 0; i < j; i++, j--) {
+            char temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+        // Print the reversed array
+        for (int i = 0; i < n; i++) {
+            System.out.print(array[i]);
+        }
+    }
+}
+
+public class Reverse_of_string {
+    public static void main(String[] args) {
+        StringReverse obj = new StringReverse();
+        obj.reverse();
+    }
+}
