@@ -1,0 +1,33 @@
+package dsa;
+
+class BubbleSorting {
+    int arr[] = {45, 89, 5, 12, 1, 100, 50};
+    int n = arr.length;
+
+    void sort() {
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    void show() {
+        System.out.println("Sorted array is:");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+public class Bubble_sorting  {
+    public static void main(String[] args) {
+        BubbleSorting obj = new BubbleSorting();
+        obj.sort();
+        obj.show();
+    }
+}
