@@ -1,0 +1,47 @@
+package dsa;
+import java.util.*;
+
+class perfect
+{
+	
+	
+	void perfect_no()
+	{
+		System.out.println("Enter the number:");
+		Scanner s= new Scanner(System.in);
+		int n= s.nextInt();
+		
+		
+		int sum=0;
+		
+		for(int i=1;i<n;i++)
+		{
+			if(n%i==0)
+			{
+				sum=sum+i;
+			}
+		}
+		
+		if(sum==n)
+		{
+			System.out.println( n+" given no is perfect no");
+		}
+		else
+		{
+			System.out.println( n+" given no is not  perfect no");
+			
+		}
+		
+	}
+	
+	
+}
+public class Perfect_no {
+
+	public static void main(String[] args) {
+		 perfect obj = new  perfect();
+		 obj.perfect_no();
+		
+	}
+
+}
