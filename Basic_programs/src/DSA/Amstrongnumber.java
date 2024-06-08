@@ -22,12 +22,12 @@ public class Amstrongnumber {
 		}
 		if(count==originalno)
 		{
-			System.out.println("is perfect number");
+			System.out.println("is Amstrong number");
 			
 		}
 		else
 		{
-			System.out.println("is not perfect number");
+			System.out.println("is not amstrong number");
 		}
 		
 	
