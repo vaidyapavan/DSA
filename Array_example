@@ -1,0 +1,93 @@
+package dsa;
+
+import java.util.*;
+
+
+
+class array1
+{
+	
+	int marks[]= {45,80,34,56,98,67,12,34,76,99};
+	int n;
+	void example()
+	{
+		
+		n= marks.length;
+		System.out.println("length of an array is: "+ n);
+		
+		
+		
+		
+		
+		
+	}
+	void max()
+	{
+		int max_element= marks[0];
+		int index=-1;
+		for(int i=0;i<n;i++)
+		{
+			if(max_element<marks[i])
+			{
+				max_element=marks[i];
+				index=i;
+			}
+		}
+		
+		System.out.println("students marks  are:");
+		
+		
+		for(int i=0;i<n;i++)
+		{
+			System.out.print(marks[i]+" ,");
+		}
+		System.out.println("");
+		System.out.println("Maximum element obtained  at index :"+ index +" is "+ max_element);
+		
+		
+		
+		
+		
+	}
+	void sorting()
+	{
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n-i-1;j++)
+			{
+				if(marks[j]>marks[j+1])
+				{
+					int temp;
+					temp=marks[j];
+					marks[j]=marks[j+1];
+					marks[j+1]=temp;
+				}
+			}
+		}
+		
+		
+		
+	System.out.println("Marks after sorting are:");
+	
+	
+	for(int i=0;i<n;i++)
+	{
+		System.out.print(marks[i]+" ,");
+	}
+	}
+	
+	
+
+}
+public class Array_example {
+
+	public static void main(String[] args) {
+		array1 obj = new array1();
+		obj.example();
+		obj.max();
+		obj.sorting();
+		
+
+	}
+
+}
