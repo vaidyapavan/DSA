@@ -1,0 +1,41 @@
+package dsa;
+
+import java.util.Scanner;
+
+class Padvone {
+
+    void createPadvoneSequence() {
+        int n;
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the length of the sequence:");
+        n = s.nextInt();
+    
+        
+        if (n < 3) {
+            System.out.println("Length of the sequence should be at least 3.");
+            return;
+        }
+
+        int arr[] = new int[n];
+        arr[0] = 0;
+        arr[1] = 1;
+        arr[2] = 1;
+
+        for (int i = 3; i < n; i++) {
+            arr[i] = arr[i - 1] + arr[i - 2] + arr[i - 3];
+        }
+
+        System.out.println("Padvone sequence:");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+public class Padvone_sequence {
+
+    public static void main(String[] args) {
+        Padvone obj = new Padvone();
+        obj.createPadvoneSequence();
+    }
+}
