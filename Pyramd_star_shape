@@ -1,0 +1,37 @@
+package Java;
+import java.util.*;
+
+
+
+class pyramid_struvture
+{
+	int n=10;
+	void pyramid()
+	{
+		for(int i=1;i<=n;i++)
+		{
+			int count=1;
+			for(int j=0;j<n-i;j++)
+			{
+				System.out.print(" ");
+				count++;
+			}
+			for(int k=count;k<=n;k++)
+			{
+				System.out.print(" *");
+			}
+			System.out.println();
+		}
+	}
+	
+}
+public class Pyramid_star_shape {
+
+	public static void main(String[] args) {
+		pyramid_struvture obj= new pyramid_struvture();
+		obj.pyramid();
+		
+
+	}
+
+}
