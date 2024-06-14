@@ -1,0 +1,53 @@
+package dsa;
+
+
+
+
+class rearranging_element
+{
+	int arr[]= {90,67,43,56,23,12,43,78,54,67,90,12,45};
+	int n=arr.length;
+	int even_odd_arr[]=new int[n];
+	void odd_even()
+	{
+		
+		int j=n-1;
+		int k=0;
+		for(int i=0;i<n;i++)
+		{
+			if(arr[i]%2==0)
+			{
+				even_odd_arr[k]=arr[i];
+				k++;
+				
+			}
+			else
+			{
+				
+				even_odd_arr[j]=arr[i];
+				j--;
+			}
+			
+		}
+		
+	}
+	
+	void show_element()
+	{
+		for(int i=0;i<n;i++)
+		{
+			System.out.print(even_odd_arr[i]+",");
+		}
+	}
+}
+public class Rearranging_odd_even_element_element_in_array {
+
+	public static void main(String[] args) {
+		rearranging_element obj = new rearranging_element();
+		obj.odd_even();
+		obj.show_element();
+		
+
+	}
+
+}
