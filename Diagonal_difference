@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+class Result {
+
+    int diagonalDifference(int arr[][]) {
+        int n = arr.length;
+        int sum1 = 0; 
+        int sum2 = 0; 
+
+        for (int i = 0; i < n; i++) {
+            sum1 += arr[i][i]; 
+            sum2 += arr[i][n - i - 1]; 
+        }
+
+        return Math.abs(sum1 - sum2); // Return the absolute difference
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int arr[][] = new int[n][n];
+        
+        // Reading the matrix elements
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                arr[i][j] = s.nextInt();
+            }
+        }
+        
+        Result obj = new Result();
+        int difference = obj.diagonalDifference(arr);
+        System.out.println(difference);
+    }
+}
