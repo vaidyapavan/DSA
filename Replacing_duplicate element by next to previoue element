@@ -1,0 +1,47 @@
+package dsa;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+class Uniqueue_element {
+    int arr[] = {1, 1, 7, 8, 9, 9,10, 3, 20, 10, 15, 15};
+    int n = arr.length;
+    
+    void solution() {
+        // Sort the array
+        Arrays.sort(arr);
+        
+        System.out.println("original sorted array is:");
+        for(int i=0;i<n;i++)
+        {
+        	System.out.print(arr[i]+" ");
+        }
+      for(int i=0;i<n;i++)
+      {
+    	  for(int j=i+1;j<n;j++)
+    	  {
+    		  if(arr[i]==arr[j])
+    		  {
+    			  arr[j]=arr[j-1]+1;
+    		  }
+    	  }
+      }
+      System.out.println("");
+      System.out.println(" array after replacing duplicate element by next to it's previous element :");
+        for(int i=0;i<n;i++)
+        {
+        	System.out.print(arr[i]+" ");
+        }
+        
+        
+       
+            }
+}
+
+public class Array_uniqueue_element {
+
+    public static void main(String[] args) {
+        Uniqueue_element obj = new Uniqueue_element();
+        obj.solution();
+    }
+}
