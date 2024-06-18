@@ -1,0 +1,43 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Result {
+    public static int[] gradingStudents(int[] arr) {
+        ArrayList<Integer> multiples = new ArrayList<>();
+        for (int i = 1; i <= 20; i++) {
+            multiples.add(5 * i);
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] >= 38) {
+                for (int j = 0; j < multiples.size(); j++) {
+                    int difference = multiples.get(j) - arr[i];
+                    if (difference > 0 && difference < 3) {
+                        arr[i] = multiples.get(j);
+                        break; // Break once the grade is rounded
+                    }
+                }
+            }
+        }
+        
+        return arr;
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = s.nextInt();
+        }
+
+        int[] result = Result.gradingStudents(arr);
+
+        for (int grade : result) {
+            System.out.println(grade);
+        }
+    }
+}
