@@ -1,0 +1,64 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Result {
+
+    
+
+    public static int sockMerchant(int n, int arr[]) {
+        int finalcount=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            int count=0;
+            for(int j=i+1;j<arr.length;j++)
+            {
+                if(arr[i]==arr[j])
+                {
+                    count++;
+                }
+                if(count==2)
+                {
+                    finalcount++;
+                    count=0;
+                }
+                
+            }
+        }
+        System.out.print(finalcount);
+        return 0;
+        
+    
+
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) 
+    {
+        
+    
+    Scanner s= new Scanner(System.in);
+    int n= s.nextInt();
+    
+    int arr[]= new int[n];
+    for(int i=0;i<n;i++)
+    {
+        arr[i]=s.nextInt();
+    }
+    Result obj = new Result();
+    obj.sockMerchant(n,arr);
+    
+    
+    
+    }
+}
