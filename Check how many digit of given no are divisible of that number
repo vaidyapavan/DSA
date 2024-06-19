@@ -1,0 +1,53 @@
+import java.io.*;
+import java.util.*;
+class Result {
+
+  
+
+    public static int findDigits(int arr[]) {
+        
+        for(int i=0;i<arr.length;i++)
+        {
+            int no=arr[i];
+            int original_no=no;
+            int count=0;
+            int last_digit;
+            while(no>0)
+            {
+                last_digit=no%10;
+                if(last_digit!=0)
+                {
+                    if(original_no%last_digit==0)
+                {
+                    count++;
+                }
+                    
+                }
+                
+                no=no/10;
+            }
+            System.out.println(count);
+            
+        
+        }
+        return 0;
+    
+
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args)  {
+        Scanner s= new Scanner(System.in);
+        int n= s.nextInt();
+        int arr[]= new int[n];
+        for(int i=0;i<arr.length;i++)
+        {
+            arr[i]=s.nextInt();
+        }
+        Result  obj = new Result ();
+        obj.findDigits(arr);
+        
+    }
+}
