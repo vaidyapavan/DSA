@@ -1,0 +1,42 @@
+import java.io.*;
+import java.util.*;
+
+class Result {
+
+    public static int equalizeArray(int arr[]) {
+        int count1[] = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            int count = 0;
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    count++;
+                }
+            }
+            count1[i] = count;
+        }
+
+        int maxcount = count1[0];
+        for (int i = 1; i < count1.length; i++) {  
+            if (maxcount < count1[i]) {
+                maxcount = count1[i];
+            }
+        }
+
+        int result = arr.length - maxcount;
+        return result;
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int arr[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = s.nextInt();
+        }
+
+        int result = Result.equalizeArray(arr);
+        System.out.println(result);
+    }
+}
