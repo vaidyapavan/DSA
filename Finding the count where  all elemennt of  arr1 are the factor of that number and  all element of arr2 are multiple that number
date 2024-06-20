@@ -1,0 +1,70 @@
+import java.io.*;
+import java.util.*;
+
+class Result {
+    public static int getTotalX(int arr1[], int arr2[]) {
+        int max = findMax(arr1);
+        int min = findMin(arr2);
+        int result = 0;
+
+        for (int i = max; i <= min; i++) {
+            boolean isFactor = true;
+            for (int j = 0; j < arr1.length; j++) {
+                if (i % arr1[j] != 0) {
+                    isFactor = false;
+                    break;
+                }
+            }
+            if (isFactor) {
+                for (int k = 0; k < arr2.length; k++) {
+                    if (arr2[k] % i != 0) {
+                        isFactor = false;
+                        break;
+                    }
+                }
+                if (isFactor) {
+                    result++;
+                }
+            }
+        }
+        return result;
+    }
+
+    public static int findMax(int arr1[]) {
+        int max = arr1[0];
+        for (int m = 1; m < arr1.length; m++) {
+            if (max < arr1[m]) {
+                max = arr1[m];
+            }
+        }
+        return max;
+    }
+
+    public static int findMin(int arr2[]) {
+        int min = arr2[0];
+        for (int t = 1; t < arr2.length; t++) {
+            if (min > arr2[t]) {
+                min = arr2[t];
+            }
+        }
+        return min;
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int m = s.nextInt();
+        int arr1[] = new int[n];
+        int arr2[] = new int[m];
+        for (int i = 0; i < n; i++) {
+            arr1[i] = s.nextInt();
+        }
+        for (int j = 0; j < m; j++) {
+            arr2[j] = s.nextInt();
+        }
+        int result = Result.getTotalX(arr1, arr2);
+        System.out.println(result);
+    }
+}
