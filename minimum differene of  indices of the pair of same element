@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+
+class Result {
+
+    public static int minimumDistances(int arr[]) {
+        int finaldiff = Integer.MAX_VALUE;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    int diff = Math.abs(j - i);
+                    if (diff < finaldiff) {
+                        finaldiff = diff;
+                    }
+                }
+            }
+        }
+        if (finaldiff == Integer.MAX_VALUE) {
+            return -1;
+        }
+        return finaldiff;
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int arr[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = s.nextInt();
+        }
+        int result = Result.minimumDistances(arr);
+        System.out.println(result);
+    }
+}
