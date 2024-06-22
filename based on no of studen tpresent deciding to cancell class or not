@@ -1,0 +1,65 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Result {
+
+    
+
+    void angryProfessor(int k, int arr[]) {
+        int count=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]<=0)
+            count++;
+        }
+        if(count>=k)
+        {
+            System.out.println("NO");
+        }
+        else
+        {
+             System.out.println("YES");
+        }
+        
+        
+        
+    
+
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        Scanner s= new Scanner(System.in);
+        
+        Result obj = new Result();
+        int n=s.nextInt();
+        for(int i=0;i<n;i++)
+        {
+              int student=s.nextInt();
+              int k= s.nextInt();
+            int arr[]= new int[student];
+          
+            
+            for(int j=0;j<student;j++)
+            {
+                arr[j]=s.nextInt();
+                
+            }
+             obj.angryProfessor(k,arr);
+        
+        }
+        
+       
+    }
+}
