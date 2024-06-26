@@ -1,0 +1,28 @@
+package Java;
+import java.util.*;
+
+public class Counting_spaces_in_sentence {
+
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		String str=" Hi meself pavan vaidya";
+		int spacecount=0;
+		  int length=str.length();
+		  
+		  for(int i=0;i<length;i++)
+		  {
+			  if(str.charAt(i)==' ')
+			  {
+				  spacecount++;
+			  }
+		  }
+		  System.out.println(" no of spaces are:");
+		  System.out.print(spacecount);
+		
+		
+		
+		
+		
+	}
+
+}
