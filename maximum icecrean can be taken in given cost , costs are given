@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+
+class Result {
+
+    public static int[] icecreamParlor(int m, int arr[]) {
+        for(int i = 0; i < arr.length; i++) {
+            for(int j = i + 1; j < arr.length; j++) {
+                if(arr[i] + arr[j] == m) {
+                    return new int[] {i + 1, j + 1}; // 1-based index
+                }
+            }
+        }
+        return new int[0]; 
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt(); // Number of test cases
+        for (int i = 0; i < t; i++) {
+            int m = s.nextInt();
+            int n = s.nextInt();
+            int arr[] = new int[n];
+            for(int j = 0; j < n; j++) {
+                arr[j] = s.nextInt();
+            }
+            Result obj = new Result();
+            int[] result = obj.icecreamParlor(m, arr);
+            if(result.length > 0) {
+                System.out.println(result[0] + " " + result[1]);
+            }
+        }
+    }
+}
