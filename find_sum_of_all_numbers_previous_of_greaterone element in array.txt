@@ -1,0 +1,58 @@
+package dsa;
+import java.util.*;
+
+
+
+class arrsum{
+	void sum()
+	{
+		int arr[]= {90,100,120,500,23,76,89,10};
+		int n= arr.length-1;
+		int max=0;
+		
+		for(int i=0;i<n;i++)
+		{
+			
+			if(arr[i]>max)
+			{
+				max=arr[i];
+			}
+			
+		}
+		int count=0;
+		for(int i=0;i<n;i++)
+		{
+			if(arr[i]!=max)
+			{count++;
+		
+			}
+			else {
+				break;
+			}
+			
+		}
+		
+		int sum=0;
+		for(int j=count-1;j>=0;j--)
+		{
+			sum=sum+arr[j];
+		}
+		
+		System.out.println(sum);
+		
+		
+	}
+	
+}
+public class find_sum_of_all_numbers_previous_of_greateone {
+
+	public static void main(String[] args) {
+		
+		Scanner s= new Scanner(System.in);
+		arrsum obj= new arrsum();
+		obj.sum();
+		
+
+	}
+
+}
