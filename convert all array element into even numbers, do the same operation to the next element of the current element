@@ -1,0 +1,51 @@
+import java.io.*;
+import java.util.*;
+
+class Result {
+
+    public int fairRations(int arr[]) {
+        int count = 0;
+        int n = arr.length;
+
+       
+        for (int i = 0; i < n - 1; i++) {
+           
+            if (arr[i] % 2 != 0) {
+                
+                arr[i]++;
+                
+                arr[i + 1]++;
+                
+                count += 2;
+            }
+        }
+
+        // Check if the last element is even, if not return -1 indicating not possible
+        if (arr[n - 1] % 2 != 0) {
+            return -1;
+        }
+
+        return count;
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int arr[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = s.nextInt();
+        }
+
+        Result obj = new Result();
+        int result = obj.fairRations(arr);
+
+        if (result == -1) {
+            System.out.println("NO");
+        } else {
+            System.out.println(result);
+        }
+    }
+}
