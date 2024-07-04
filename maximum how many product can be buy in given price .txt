@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+
+class Result {
+
+    void howManyGames(int p, int d, int m, int s) {
+        int count = 0;  // Number of games bought
+        int sum = 0;    // Total cost
+
+        
+        while (sum + p <= s) {
+            sum += p;
+            count++;
+            if (p - d > m) {
+                p -= d;
+            } else {
+                p = m;
+            }
+        }
+
+    
+        System.out.println(count);
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        Scanner st = new Scanner(System.in);
+        int p = st.nextInt();  // Initial price
+        int d = st.nextInt();  // Decrease in price
+        int m = st.nextInt();  // Minimum price
+        int s = st.nextInt();  // Total budget
+
+        Result obj = new Result();
+        obj.howManyGames(p, d, m, s);
+    }
+}
