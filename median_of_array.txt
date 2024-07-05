@@ -1,0 +1,33 @@
+import java.util.*;
+
+class Result {
+    void findMedian(int[] arr) {
+        Arrays.sort(arr);
+        
+        int n = arr.length;
+        if (n % 2 != 0) {
+            
+            System.out.println(arr[n / 2]);
+        } else {
+            // If length of array is even
+            int median1 = arr[n / 2 - 1];
+            int median2 = arr[n / 2];
+            System.out.println((median1 + median2) / 2);
+        }
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int[] arr = new int[n];
+        
+        for (int i = 0; i < n; i++) {
+            arr[i] = s.nextInt();
+        }
+        
+        Result obj = new Result();
+        obj.findMedian(arr);
+    }
+}
