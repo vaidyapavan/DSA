@@ -1,0 +1,29 @@
+package dsa;
+
+public class zero_at_last {
+
+    public static void main(String[] args) {
+        
+        int arr[] = {56, 0, 6, 43, 2, 0, 7, 5, 4, 230, 0, 0, 7};
+        int n = arr.length;
+        
+        int j = 0; // index for placing non-zero elements
+        
+        // Loop through the array and place non-zero elements at the beginning
+        for (int i = 0; i < n; i++) {
+            if (arr[i] != 0) {
+                arr[j++] = arr[i];
+            }
+        }
+        
+        // Fill the remaining positions with zeros
+        while (j < n) {
+            arr[j++] = 0;
+        }
+        
+        // Print the modified array
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + (i < n - 1 ? ", " : ""));
+        }
+    }
+}
