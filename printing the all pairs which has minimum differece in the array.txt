@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+
+class Result {
+    void closestNumbers(int[] arr) {
+        Arrays.sort(arr);
+        
+        int minDiff = Integer.MAX_VALUE;
+
+        // First, find the minimum difference
+        for (int i = 1; i < arr.length; i++) {
+            int diff = arr[i] - arr[i - 1];
+            if (diff < minDiff) {
+                minDiff = diff;
+            }
+        }
+        
+        // Then, print all pairs with the minimum difference
+        for (int i = 1; i < arr.length; i++) {
+            int diff = arr[i] - arr[i - 1];
+            if (diff == minDiff) {
+                System.out.println(arr[i - 1] + " " + arr[i]);
+            }
+        }
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int[] arr = new int[n];
+        
+        for (int i = 0; i < n; i++) {
+            arr[i] = s.nextInt();
+        }
+        
+        Result obj = new Result();
+        obj.closestNumbers(arr);
+    }
+}
