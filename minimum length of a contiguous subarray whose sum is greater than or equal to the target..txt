@@ -1,0 +1,40 @@
+package dsa;
+import java.util.*;
+
+class MinimumSubarray {
+    void subarray() {
+        Scanner s = new Scanner(System.in);
+        int arr[] = {1, 2, 3, 1, 4, 6, 4, 3, 5, 8, 9, 1, 2, 4, 3, 7, 8};
+        int n = arr.length;
+        System.out.println("Enter target sum:");
+        int target_sum = s.nextInt();
+        int minLength = Integer.MAX_VALUE;
+        
+        for (int i = 0; i < n; i++) {
+            int sum = 0;
+            for (int j = i; j < n; j++) {
+                sum += arr[j];
+                if (sum == target_sum) {
+                    int subarrayLength = j - i + 1;
+                    if (subarrayLength < minLength) {
+                        minLength = subarrayLength;
+                    }
+                    
+                }
+            }
+        }
+        
+        if (minLength == Integer.MAX_VALUE) {
+            System.out.println("No subarray with the target sum found.");
+        } else {
+            System.out.println("Minimum length subarray with the target sum is: " + minLength);
+        }
+    }
+}
+
+public class Minimum_size_subarray_with_targeted_sum{
+    public static void main(String[] args) {
+        MinimumSubarray obj = new MinimumSubarray();
+        obj.subarray();
+    }
+}
