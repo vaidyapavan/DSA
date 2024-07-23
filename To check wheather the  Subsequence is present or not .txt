@@ -1,0 +1,37 @@
+class Solution {
+    public boolean isSubsequence(String s, String t) {
+        int sLen = s.length();
+        int tLen = t.length();
+        
+        
+        int sIndex = 0;
+        int tIndex = 0;
+        
+       
+        while (sIndex < sLen && tIndex < tLen) {
+            
+            if (s.charAt(sIndex) == t.charAt(tIndex)) {
+                sIndex++;
+            }
+            
+            tIndex++;
+        }
+        
+        
+        return sIndex == sLen;
+    }
+
+    public static void main(String[] args) {
+        String s = "abc";
+        String t = "ahbgdc";
+        
+        Solution obj = new Solution();
+        boolean result = obj.isSubsequence(s, t);
+        System.out.println(result);  // Expected output: true
+
+        s = "axc";
+        t = "ahbgdc";
+        result = obj.isSubsequence(s, t);
+        System.out.println(result);  // Expected output: false
+    }
+}
