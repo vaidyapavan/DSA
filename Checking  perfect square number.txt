@@ -1,0 +1,39 @@
+package dsa;
+import java.util.*;
+import java.math.*;
+
+
+
+class PerfectSquareNumber
+{
+	void check(int no)
+	{
+		int squareRoot = (int) Math.sqrt(no);
+		
+		if(squareRoot * squareRoot == no)
+		{
+			System.out.println("True");
+		}
+		else
+		{
+			System.out.println("False");
+		}
+		
+		
+	}
+}
+public class Check_perfect_square {
+
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		System.out.println("Enter the number");
+		int no = s.nextInt();
+		PerfectSquareNumber obj = new PerfectSquareNumber();
+		obj.check(no);
+		
+		
+		
+
+	}
+
+}
