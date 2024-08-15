@@ -1,0 +1,45 @@
+package dsa;
+
+
+class Prime
+{
+	
+	void check_prime_numbers(int start,int end)
+	{
+		  int primeNumberCount=0;
+		for(int i=start;i<=end;i++)
+		{
+			int count=0;
+			for(int j=2;j<i;j++)
+			{
+				if(i % j == 0)
+				{
+					count++;
+					
+					break;
+				}
+			}
+			if(count == 0)
+			{
+				primeNumberCount++;
+			}
+			
+		}
+		System.out.println("Total prime numbers are:"+ primeNumberCount);
+		
+	}
+	
+}
+public class Prime_number_in_range {
+
+	public static void main(String[] args) {
+		int start = 5;
+		int end = 100;
+		Prime obj = new Prime();
+		obj.check_prime_numbers(start, end);
+		
+		
+
+	}
+
+}
