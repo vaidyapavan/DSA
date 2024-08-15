@@ -1,0 +1,47 @@
+package dsa;
+import java.util.*;
+
+class StrongNumber {
+    
+    
+    void check(int no) {
+        int originalNumber = no;
+        int sum = 0;
+        
+        
+        while (no > 0) {
+            int lastDigit = no % 10;
+            
+          
+            int fact = 1;
+            for (int i = 2; i <= lastDigit; i++) {
+                fact = fact * i;
+            }
+            
+            
+            sum = sum + fact;
+            
+           
+            no = no / 10;
+        }
+        
+       
+        if (originalNumber == sum) {
+            System.out.println(originalNumber + " is a Strong Number");
+        } else {
+            System.out.println(originalNumber + " is not a Strong Number");
+        }
+    }
+}
+
+public class Strong_number {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the number:");
+        int no = s.nextInt();
+        
+        StrongNumber obj = new StrongNumber();
+        obj.check(no);
+    }
+}
