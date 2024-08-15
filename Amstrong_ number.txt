@@ -1,0 +1,44 @@
+package dsa;
+import java.util.*;
+
+class Amstrong
+{
+	void amstrongNumbber(int no)
+	{
+		int originalNumber=no;
+		int sumOfQubeOfDigit=0;
+		while(no > 0)
+		{
+			int lastDigit=no % 10;
+			sumOfQubeOfDigit = sumOfQubeOfDigit + (lastDigit*lastDigit*lastDigit);
+			no = no/10;
+			
+			
+		}
+		if(sumOfQubeOfDigit == originalNumber )
+		{
+			System.out.println(originalNumber +" is Amstrong number ");
+		}
+		else
+		{
+			System.out.println(originalNumber +" is not  Amstrong number ");
+			
+		}
+		
+	}
+}
+public class Amstrong_number {
+
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		System.out.println("Enter the number");
+		int no = s.nextInt();
+		Amstrong obj = new Amstrong();
+		obj.amstrongNumbber(no);
+		
+		
+		
+
+	}
+
+}
