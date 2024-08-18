@@ -1,0 +1,36 @@
+package dsa;
+
+  class Prime1 {
+    void sum(int arr[]) {
+        int n = arr.length;
+        int sum = 0;
+
+        for (int i = 2; i < n; i++) {  
+            boolean isPrime = true; 
+
+           
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            
+            if (isPrime) {
+                sum += arr[i];
+            }
+        }
+
+        System.out.println("Sum of elements at prime indices: " + sum);
+    }
+}
+
+public class Prime_index_sum {  
+
+    public static void main(String[] args) {
+        int arr[] = {100, 200, 300, 400, 500, 600, 700, 800};
+        Prime1 obj = new Prime1();
+        obj.sum(arr);
+    }
+}
