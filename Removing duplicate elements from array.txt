@@ -1,0 +1,55 @@
+package dsa;
+import java.util.*;
+
+
+class duplicate
+{
+	void remove(int arr[])
+	{
+		int n= arr.length;
+		System.out.println(n);
+		
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n-1;j++)
+			{
+				if(i != j)
+				{
+					if(arr[i] == arr[j])
+					{
+						arr[j] = arr[j+1];
+						j--;
+						n--;
+						
+						
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+		System.out.println("elements after removing the duplicates are:");
+		 for(int i=0 ;i< n;i++)
+		 {
+				System.out.print(arr[i]+" ");
+			
+		 }
+		
+	}
+}
+public class Removing_duplicate_element_from_array {
+
+	public static void main(String[] args) {
+		
+		int arr[] = {1,2,4,2,5,3,3,8,1,2,3};
+		duplicate obj = new duplicate();
+		
+		obj.remove(arr);
+		
+		
+
+	}
+
+}
