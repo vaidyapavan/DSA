@@ -1,0 +1,32 @@
+package dsa;
+
+class MaxProduct {
+    void maximum(int arr[]) {
+        int n = arr.length;
+
+        int max_product = Integer.MIN_VALUE;
+
+      
+        for (int i = 0; i < n; i++) {
+            int product = 1;  
+            for (int j = i; j < n; j++) {
+                product *= arr[j];  
+                
+            }
+            if (product > max_product) {
+                max_product = product;
+            }
+        }
+
+        System.out.println("Maximum product is: " + max_product);
+    }
+}
+
+public class  Maxumum_product_of_subarray  {
+    public static void main(String[] args) {
+        MaxProduct obj = new MaxProduct();
+
+        int arr[] = {1, 2, 3, -4, 5, -6, 7, 8};
+        obj.maximum(arr);
+    }
+}
