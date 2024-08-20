@@ -1,0 +1,60 @@
+package dsa;
+
+
+
+
+class Non_epeated_element
+{
+	void check(int arr[])
+	{
+		int n= arr.length;
+		int nonRepeated[] = new int[n];
+		int index = -1;
+		
+		for(int i=0; i<n; i++)
+		{
+			int count = 0;
+			for(int j=0;j<n;j++)
+			{
+				if(i != j)
+				{
+					if(arr[i] == arr[j])
+					{
+						count++;
+					}
+					
+				}
+				
+			}
+			if(count == 0)
+			{
+				index++;
+				nonRepeated[index] = arr[i];
+				
+			}
+		}
+		
+		System.out.println("Nonrepeated elements are :");
+		
+		for(int i=0; i<index +1 ; i++)
+		{
+			System.out.print(nonRepeated[i] + " ,");
+			
+		}
+		
+		
+	
+		
+	}
+}
+public class Non_repeated_emlement {
+
+	public static void main(String[] args) {
+		
+		int arr[] = {1,6,3,8,9,4,6,3,};
+		Non_epeated_element obj = new Non_epeated_element();
+		obj.check(arr);
+		
+	}
+
+}
