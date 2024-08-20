@@ -1,0 +1,47 @@
+package dsa;
+import java.util.*;
+
+
+class Absolute_difference
+{
+	int difference(int arr[])
+	{
+		int n = arr.length; 
+		
+		int minimum_difference = Integer.MAX_VALUE;
+		int diff;
+		
+		
+		Arrays.sort(arr);
+		
+		for(int i=0; i<n-1; i++)
+		{
+			
+			 diff = Math.abs(arr[i+1] - arr[i]);
+			 System.out.println(diff);
+			if(diff < minimum_difference)
+			{
+				
+				minimum_difference =diff;
+			}
+		
+		
+		}
+		
+		return minimum_difference;
+		
+	}
+}
+public class Minimum_absolute_difference {
+
+	public static void main(String[] args) {
+		int arr[] = {1,-6,3,8,100,-5,4,90};
+		Absolute_difference obj = new Absolute_difference();
+		int result = obj.difference(arr);
+		System.out.println("MInimum absolutr difference is: "+ result);
+		
+		
+
+	}
+
+}
