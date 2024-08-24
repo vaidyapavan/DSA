@@ -1,0 +1,50 @@
+package dsa;
+
+
+
+class odd_even
+{
+	void seprate(int arr[])
+	{
+		
+		int n= arr.length;
+		int newArr[] = new int[n];
+		int startIndex = 0;
+		int lastIndex = n-1;
+		
+		for(int i=0; i<n; i++)
+		{
+			if(arr[i]%2 == 0 )
+			{
+				newArr[startIndex] = arr[i];
+				startIndex++;
+			}
+			else
+			{
+				newArr[lastIndex] = arr[i];
+				lastIndex--;
+			}
+			
+		}
+		
+		System.out.println("New sorted array is:");
+		
+		for(int i=0; i<n;i++)
+		{
+			System.out.print(newArr[i] +" ");
+		}
+	}
+}
+public class Odd_even_segration {
+
+	public static void main(String[] args) {
+		
+		int arr[] = {2,7,5,2,3,8,9,23,68,42,99};
+		odd_even obj = new odd_even();
+		obj.seprate(arr);
+		
+		
+
+	}
+
+}
