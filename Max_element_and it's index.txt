@@ -1,0 +1,41 @@
+package dsa;
+
+public class Max_element_and_index {
+
+	public static void main(String[] args) {
+		int arr[] = {1,6,8,56,90,100,500,34,67};
+		
+		int n = arr.length;
+		int max = Integer.MIN_VALUE;
+		int maxindex = -1;
+		for(int i=0;i<n;i++)
+		{
+			if(arr[i] > max)
+			{
+				max = arr[i];
+				maxindex = i;
+				
+			}
+			else {
+				
+			}
+			
+			
+		}
+		
+		if(maxindex >= 0)
+		{
+			System.out.println(max);
+			System.out.println(maxindex);
+			
+		}
+		else
+		{
+			System.out.println("there is no max element in the array" );
+		}
+		
+		
+
+	}
+
+}
