@@ -1,0 +1,53 @@
+package java_programming;
+
+
+class Difference
+{
+	
+	void calculate(int arr[], int n)
+	{
+		int maxMinDiffefence;
+		
+		
+		int max_element = Integer.MIN_VALUE;
+		int min_element = Integer.MAX_VALUE;
+		
+		for(int i=0; i<n; i++)
+		{
+			if(arr[i]>max_element)
+			{
+				max_element = arr[i];
+			}
+			if(arr[i]<min_element)
+			{
+				min_element = arr[i];
+			}
+		}
+		
+		maxMinDiffefence = Math.abs(max_element - min_element);
+		
+		System.out.println(maxMinDiffefence);
+		
+		
+		
+		
+		
+	}
+}
+public class Min_max_difference {
+
+	public static void main(String[] args) {
+		
+		
+		int arr [] = {6,10,70,12,34,67,89,100,122,43,66,5};
+		int n= arr.length; 
+		 Difference obj =new  Difference();
+		 obj.calculate(arr, n);
+		
+		
+		
+		
+
+	}
+
+}
