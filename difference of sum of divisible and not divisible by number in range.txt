@@ -1,0 +1,33 @@
+package java_programming;
+
+public class Difference_divisible_and_not_divisible_by_four {
+
+	public static void main(String[] args) {
+		int m=20;
+		int n=4;
+		int divisible_sum = 0;
+		int not_divisible_sum = 0;
+		for(int i=1;i<=m;i++)
+		{
+			if(i%n == 0)
+			{
+				divisible_sum = divisible_sum + i;
+				
+			}
+			else
+			{
+				not_divisible_sum = not_divisible_sum + i;
+				
+				
+			}
+		}
+		
+		System.out.println(not_divisible_sum);
+		System.out.println(divisible_sum);
+		
+		int difference =  not_divisible_sum - divisible_sum;
+		System.out.println(difference);
+
+	}
+
+}
