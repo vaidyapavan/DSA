@@ -1,0 +1,51 @@
+package java_programming;
+import  java.util.*;
+
+class negativeNumberSum
+{
+	int sum(int arr[],int n)
+	{
+		int sum = 0;
+		for(int i=0; i<n; i++)
+		{
+			if(arr[i]<0)
+			{
+				sum = sum + arr[i];
+			}
+		}
+		
+		return sum;
+		
+	}
+}
+public class Sum_of_negative_numbers {
+
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		negativeNumberSum obj = new negativeNumberSum();
+		int n=4;
+		int arr[] =new int[n];
+		System.out.println("enter the numbers");
+		for(int i=0; i<n;i++)
+		{
+			arr[i] = s.nextInt();
+		}
+		int result =obj.sum(arr, n);
+		if(result >0)
+		{
+			System.out.println("sum of negative numbers is: "+result);
+			
+		}
+		else
+		{
+			System.out.println("there are no negative element in the array");
+		}
+		
+		
+		
+		
+		
+
+	}
+
+}
