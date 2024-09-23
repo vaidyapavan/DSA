@@ -1,0 +1,51 @@
+package java_programming;
+import java.util.*;
+
+class NUmber_of_candey
+{
+	void toFindNUmberOfCandey(int arr[],int money)
+	{
+		Arrays.sort(arr);
+		int n = arr.length;
+		int expense = 0;
+		int number_of_candey = 0;
+		
+			for(int i=0 ;i<n;i++)
+			{
+				if(arr[i] % 5 == 0)
+				{
+					
+					 number_of_candey++;
+					
+				}
+				else if(money >= arr[i])
+				{
+					
+
+					money = money - arr[i]; 
+					
+					 number_of_candey++;
+				}
+			}
+		
+		
+		System.out.println( number_of_candey);
+		
+		
+	}
+}
+public class Find_number_of_candy_can_buy {
+
+	public static void main(String[] args) {
+		int arr[] = {5,10,12,15,7,6};
+		
+		int money = 20;
+		NUmber_of_candey obj = new NUmber_of_candey();
+		obj.toFindNUmberOfCandey(arr, money);
+		
+		
+		
+
+	}
+
+}
