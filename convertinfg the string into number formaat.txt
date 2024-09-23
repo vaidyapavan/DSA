@@ -1,0 +1,46 @@
+package java_programming;
+import java.util.*;
+
+class Letter_count {
+    void check(String str) {
+        
+        String[] words = str.split(" ");
+        String result = "";
+
+        
+        for (int i = 0; i < words.length; i++) {
+            String word = words[i];
+            int length = word.length();
+            String transformedWord = word;
+
+          
+            if (length > 10) {
+                transformedWord = word.charAt(0) + String.valueOf(length - 2) + word.charAt(length - 1);
+            }
+
+        
+            result += transformedWord;
+
+            // Add a space between words, but not after the last word
+            if (i < words.length - 1) {
+                result += " ";
+            }
+        }
+
+        // Print the final result
+        System.out.println(result);
+    }
+}
+
+public class Replace_string_by_number_of_count_except_first_last_letter {
+    public static void main(String[] args) {
+        Letter_count obj = new Letter_count();
+        String str = "communication is the most important weapon";
+        
+        System.out.println("Original string length: " + str.length());
+        System.out.println("Original string: " + str);
+        
+        // Apply the abbreviation to each word
+        obj.check(str);
+    }
+}
