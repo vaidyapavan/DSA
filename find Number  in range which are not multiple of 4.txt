@@ -1,0 +1,45 @@
+package java_programming;
+import java.util.*;
+
+class remove_Multiple_Of_Four
+{
+	void removeMultipleOfFour(int start, int end)
+	{
+		int count = 0;
+		for(int i=start; i<end; i++)
+		{
+			if(i%4 == 0)
+			{
+				continue;
+				
+			}
+			else
+			{
+				System.out.println(i);
+				count++;
+			}
+		}
+		if(count == 0)
+		{
+			System.out.println("There is no number which is not  multiple of four");
+		}
+		
+		
+	}
+}
+public class Not_multiple_of_4 {
+
+	public static void main(String[] args) {
+		remove_Multiple_Of_Four obj = new remove_Multiple_Of_Four();
+		Scanner s = new Scanner(System.in);
+		System.out.println("enter the start number");
+		int start = s.nextInt();
+		System.out.println("enter the end number");
+		int end = s.nextInt();
+		obj.removeMultipleOfFour(start, end);
+				
+		
+
+	}
+
+}
