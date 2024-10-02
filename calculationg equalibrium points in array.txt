@@ -1,0 +1,75 @@
+import java.io.*;
+
+
+
+class Result {
+
+
+    
+
+  String balancedSums(int arr[]) {
+      String a = "YES";
+      String b = "NO";
+      int count = 0;
+      int length = arr.length;
+      int left_sum = 0;
+      int right_sum =0;
+      for(int i=1; i<length-1;i++)
+      {
+          for(int j =0; j<i; j++)
+          {
+              left_sum = left_sum + arr[j];
+          }
+          for(int k=i+1; k<length;k++)
+          {
+              right_sum = right_sum + arr[k];
+          }
+       if( left_sum == right_sum)
+       {
+           count++;
+          
+       }
+      }
+      
+      if(count == 0)
+      {
+          return b;
+      }
+      else{
+          return a;
+      }
+         
+      
+    
+
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args)  {
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        for(int i=0; i<t;i++)
+        {
+        int n = s.nextInt();
+        Result obj = new Result();
+       
+        int arr[] = new int[n];
+        for(int j=0; j<n;j++)
+        {
+            arr[i] =s.nextInt();
+        }
+         String result = obj.balancedSums(arr);
+         System.out.println(result);
+        }
+        
+        
+        
+        
+         
+        
+        
+        
+    }
+}
