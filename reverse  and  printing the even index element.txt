@@ -1,0 +1,46 @@
+package java_programming;
+
+
+
+class reverse
+{
+	void reverseArray(int arr[])
+	{
+		int n = arr.length -1;
+		
+		int start = 0;
+		int end = n;
+		
+		while(start < end)
+		{
+			int temp = arr[end];
+			 arr[end] = arr[start];
+			arr[start] = temp;
+			start++;
+			end--;
+		
+		}
+		
+		for(int i=0; i<n; i++)
+		{
+			if(i%2 == 0)
+			{
+				System.out.println(arr[i]);
+				
+			}
+		}
+	}
+}
+public class Array_reverse_and_print_even_index {
+
+	public static void main(String[] args) {
+	
+		
+		int arr[] = {5,8,90,3,5,1,45,9,6,5,3,490};
+		reverse obj = new reverse();
+		obj.reverseArray(arr);
+		
+
+	}
+
+}
