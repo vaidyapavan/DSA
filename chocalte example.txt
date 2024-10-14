@@ -1,0 +1,29 @@
+package java_programming;
+
+class Chocolate {
+    void chocolate(int price[]) {
+        int value = 30; 
+        int n = price.length;
+        int count = 0; 
+        int sum = 0; 
+
+        for (int i = 0; i < n; i++) {
+           
+            if (price[i] % 5 != 0 && sum + price[i] <= value) {
+                count++;
+                sum += price[i];
+            }
+        }
+
+        System.out.println("Total number of chocolates you can buy: " + count);
+    }
+}
+
+public class Chocolate_example {
+
+    public static void main(String[] args) {
+        int price[] = {10, 15, 20, 25, 7, 9, 12}; 
+        Chocolate obj = new Chocolate();
+        obj.chocolate(price); 
+    }
+}
