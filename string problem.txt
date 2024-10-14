@@ -1,0 +1,38 @@
+package java_programming;
+import java.util.*;
+
+
+class string_example
+{
+	void replace(String str)
+	{
+		int n = str.length();
+		if(n>5)
+		{
+			String newstring = str.substring(0,1) + (n-2) + str.substring(n-1,n);
+			System.out.println(newstring);
+			
+		}
+		else
+		{
+			System.out.println("size of the string id less than 6");
+			
+		}
+		
+	}
+}
+public class String_problem {
+
+	public static void main(String[] args) {
+		string_example obj = new string_example();
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the string:");
+		String str = s.nextLine();
+		obj.replace(str);
+		
+		
+		
+
+	}
+
+}
