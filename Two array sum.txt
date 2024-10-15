@@ -1,0 +1,43 @@
+package java_programming;
+
+
+
+class TwoArrayExample
+{
+	void compare(String teams[], int goals[])
+	{
+		int length = goals.length;
+		
+		int max = Integer.MIN_VALUE;
+		int index = -1;
+		
+		for(int i=0; i<length;i++)
+		{
+			if(goals[i] > max)
+			{
+				max = goals[i];
+				index = i;
+			}
+		}
+		
+		if(index >-1)
+		{
+			System.out.println("Team who has highest goals are:"+ teams[index]);
+		}
+		
+		
+	}
+}
+public class Two_array {
+
+	public static void main(String[] args) {
+		String teams[] = {"a","b","c","d","e"};
+		int goals[] = {5,2,3,7,4};
+		TwoArrayExample obj = new TwoArrayExample();
+		obj.compare(teams, goals);
+		
+		
+
+	}
+
+}
