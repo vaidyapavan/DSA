@@ -1,0 +1,42 @@
+package java_programming;
+
+
+
+
+class Pairs
+{
+	void check(int arr[])
+	{
+		int n =  arr.length;
+		int count = 0;
+		for(int i=0; i<n-1;i++)
+		{
+			for(int j=i+1; j<n;j++)
+			{
+				if(arr[i] == arr[j])
+				{
+					if(i<j)
+					{
+						count++;
+					}
+				}
+			}
+		}
+		
+		System.out.println("no of good pairs are:"+ count);
+		
+		
+	}
+}
+public class GoodPairs {
+
+	public static void main(String[] args) {
+	
+		
+		int arr[] = {12, 90,5,100,6,89,26,8,10,90,100}; 
+		Pairs obj = new Pairs();
+		obj.check(arr);
+
+	}
+
+}
