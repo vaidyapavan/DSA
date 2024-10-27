@@ -1,0 +1,28 @@
+package Recursion;
+
+class SumOfFirstNnumbers {
+   
+    void sum(int n, int i, int currentSum) {
+        
+        if (i > n) {
+            System.out.println("Sum: " + currentSum);
+            return;
+        }
+        
+     
+        currentSum += i;
+        
+        
+        sum(n, i + 1, currentSum);
+    }
+}
+
+public class Sum_of_first_n_numbers {
+    public static void main(String[] args) {
+        // Create an object of SumOfFirstNnumbers
+        SumOfFirstNnumbers obj = new SumOfFirstNnumbers();
+        int n = 10;
+        // Call the sum method starting with i=1 and sum=0
+        obj.sum(n, 1, 0);
+    }
+}
