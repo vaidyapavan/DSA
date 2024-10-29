@@ -1,0 +1,43 @@
+package Accenture;
+
+
+class Checkingdivisibility
+{
+	void check(int m , int n)
+	{
+		int divisibleSum = 0;
+		int nondivisiblesum = 0;
+		for(int i=n; i<=m;i++)
+		{
+			if(i%4 == 0)
+			{
+				divisibleSum =divisibleSum + i;
+//		
+			}
+			else
+			{
+				nondivisiblesum = nondivisiblesum + i;
+				
+			}
+		}
+		System.out.println(divisibleSum);
+		System.out.println(nondivisiblesum);
+		int difference  = Math.abs(divisibleSum- nondivisiblesum );
+		
+		System.out.println(difference);
+	}
+}
+public class DivisibilityTestProblemInRange {
+
+	public static void main(String[] args) {
+		 Checkingdivisibility obj = new  Checkingdivisibility();
+		 int m = 20;
+		 int n= 4;
+		 obj.check(m, n);
+		
+		
+			
+
+	}
+
+}
