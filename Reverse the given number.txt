@@ -1,0 +1,33 @@
+package Accenture;
+import java.util.*;
+class reverse
+{
+	void reverseNumber(int no)
+	{
+		int ReverseNumber = 0;
+		while(no > 0)
+		{
+			int lastDigit = no % 10;
+			ReverseNumber = 10 * ReverseNumber + lastDigit;
+			no = no/10;
+			
+		}
+		
+		System.out.println("Reversed numbe ris:"+ ReverseNumber);
+		
+		
+		
+	}
+}
+ 
+public class ReverseNumber {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int no = s.nextInt();
+		reverse obj = new reverse();
+		obj.reverseNumber(no);
+	}
+
+}
