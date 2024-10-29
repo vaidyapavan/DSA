@@ -1,0 +1,27 @@
+package Accenture;
+
+public class CountOfLettersInLastWordOfString {
+
+	public static void main(String[] args) {
+		String str = "fshdfd hfjhds ffjhf fjhdfjdf eyge";
+		
+		str = str.trim();
+		int n = str.length()-1;
+		
+		int count = 0;
+		for(int i=n; i>0;i--)
+		{
+			if(str.charAt(i) == ' ')
+			{
+				break;
+			}
+			else
+			{
+				count++;
+			}
+		}
+		System.out.println("Length of the last word of the string is: "+count);
+
+	}
+
+}
