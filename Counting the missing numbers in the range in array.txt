@@ -1,0 +1,47 @@
+package Accenture;
+import java.util.Arrays;
+
+class  MissingNumber
+{
+	void check(int arr[])
+	{
+		int n = arr.length -1;
+		
+		Arrays.sort(arr);
+		int minElement = arr[0];
+		int maxElement = arr[n];
+		
+		
+		
+		for(int i=minElement; i<=maxElement; i++)
+		{
+			int count = 0;
+			for(int j =0; j<arr.length;j++)
+			{
+				if(arr[j] == i)
+				{
+					count++;
+				}
+			}
+			
+			if(count == 0)
+			{
+				System.out.println(i);
+			}
+		}
+		
+	
+		
+	}
+}
+public class MissingNumbberInRange {
+	public static void main(String args[])
+	{
+		 MissingNumber obj = new  MissingNumber();
+		 
+		 int arr[] = {6,0,1};
+		 obj.check(arr);
+		
+	}
+
+}
