@@ -1,0 +1,37 @@
+package Basic_DSA;
+import java.util.*;
+
+public class GP {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the first element of the GP  series");
+		int a = s.nextInt();
+		System.out.println("Enter the  value of the  ration of the GP series ");
+		float d = s.nextInt();
+		System.out.println("Enter the number of the term of the series");
+		int n = s.nextInt();
+		float arr[] = new float[n];
+		
+		arr[0] = a;
+		
+		for(int i=1; i<n;i++)
+		{
+		  float nextTerm = arr[i-1]*d;
+			arr[i] = nextTerm;
+		}
+		
+		
+		for(int i=0; i<n;i++)
+		{
+			System.out.println(arr[i]+" ");
+		}
+	
+		
+		
+		
+		
+
+	}
+
+}
