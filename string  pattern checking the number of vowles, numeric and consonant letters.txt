@@ -1,0 +1,48 @@
+package Basic_DSA;
+import java.util.Scanner;
+
+public class String_pattern_Checking {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        
+        String str = s.nextLine();
+        
+        String arr[] = str.split(" ");
+        
+        int n = arr.length;
+        int validWordCount = 0;
+        
+        for (int i = 0; i < n; i++) {
+            int vowelsCount = 0;
+            int consonantCount = 0;
+            int numericCount = 0;
+
+            for (int j = 0; j < arr[i].length(); j++) {
+                char ch = arr[i].charAt(j);
+                
+                // Check for vowels
+                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+                    ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+                    vowelsCount++;
+                }
+                // Check for consonants (assuming only alphabetic characters)
+                else if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+                    consonantCount++;
+                }
+                // Check for numeric characters
+                else if (ch >= '0' && ch <= '9') {
+                    numericCount++;
+                }
+            }
+
+            // Valid word if it contains at least one vowel, one consonant, and one numeric character
+            if (consonantCount >= 1 && numericCount >= 1 && vowelsCount >= 1) {
+                validWordCount++;
+            }
+        }
+        
+        System.out.println("Valid word count: " + validWordCount);
+        s.close();
+    }
+}
