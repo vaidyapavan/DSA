@@ -1,0 +1,41 @@
+package Basic_DSA;
+
+public class SecondMaximumElement {
+	
+	static int second_max_element()
+	{
+		int arr[] = {2,89,40,100,45,78,99};
+		
+		int n= arr.length;
+		
+		int maxElement = 0;
+		int secondMax = 0;
+		
+		for(int i=0; i<n ;i++)
+		{
+			if(arr[i] > maxElement)
+			{
+				secondMax = maxElement;
+				maxElement = arr[i];
+			}
+			
+			else if(arr[i]> secondMax && arr[i] < maxElement)
+			{
+				secondMax = arr[i];
+			}
+		}
+		
+		
+	
+		return secondMax;
+	}
+	
+	
+	public static void main(String args[])
+	{
+		int result = SecondMaximumElement.second_max_element();
+		System.out.println("seconf max element is:"+ result);
+		
+	}
+
+}
