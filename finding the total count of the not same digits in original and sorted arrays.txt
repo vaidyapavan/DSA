@@ -1,0 +1,28 @@
+import java.util.*;
+class Solution {
+    static int heightChecker(int[] heights) {
+        int n = heights.length;
+
+        int new_arr[] =Arrays.copyOf(heights,heights.length);
+        Arrays.sort(new_arr);
+        int count =0;
+
+        for(int i=0; i<n;i++)
+        {
+            if(heights[i] != new_arr[i])
+            {
+                count++;
+            }
+        }
+        return count;
+        
+    }
+    public static void main(String args[])
+    {
+        int heights [] = {1,1,4,2,1,1};
+        int result = Solution.heightChecker(heights);
+          System.out.println(result);
+
+
+    }
+}
