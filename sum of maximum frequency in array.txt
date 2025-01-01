@@ -1,0 +1,44 @@
+package Basic_DSA;
+
+
+import java.util.*;
+import java.util.Arrays;
+class Solution {
+   static int maxFrequencyElements(int[] nums) {
+       int n= nums.length-1;
+       Arrays.sort(nums);
+       int maxfrequency =0; 
+       int sum =0;
+       for(int i=0;i<n;i++)
+       {
+           int frequency =0; 
+           for(int j=i; j<n;j++)
+           {
+               if(nums[i]== nums[j])
+               {
+                   frequency++;
+               }
+           }
+           if( maxfrequency <= frequency)
+           {
+                maxfrequency = frequency ;
+                i=i+(frequency-1);
+               
+           }
+           
+           if(frequency == maxfrequency)
+           {
+        	   sum = sum+ maxfrequency;
+           }
+       }
+
+       return sum;  
+   }
+
+   public static void main(String args[])
+   {
+     int   nums[] = {1,2,2,3,1,4};
+     int result = Solution.maxFrequencyElements(nums);
+     System.out.println(result);
+   }
+}
