@@ -1,0 +1,29 @@
+package Basic_DSA;
+
+public class FindingOctalEquivalent {
+	
+	 static String octalequivalent(int no)
+	{
+		StringBuilder octal = new StringBuilder();
+		
+		while (no>0)
+		{
+			int last_digit = no%8;
+			octal.insert(0, last_digit);
+			no = no/8;
+		}
+		
+		return octal.toString();
+	}
+
+	public static void main(String[] args) {
+		FindingOctalEquivalent obj = new FindingOctalEquivalent();
+		int no= 65;
+		String result = obj.octalequivalent( no);
+		
+		System.out.println(result);
+		
+
+	}
+
+}
