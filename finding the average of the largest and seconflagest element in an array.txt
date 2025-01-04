@@ -1,0 +1,42 @@
+package Basic_DSA;
+
+public class AverageOfLargestAndSecondLagestNumber {
+	
+	static int average()
+	{
+		int arr[] = {6,10,70,12,34,67,89,100,122,43,66,5};
+		int n = arr.length-1;
+		int largest =0;
+		int second_largest = 0;
+		
+		
+		for(int i=0; i<n;i++)
+		{
+			if(arr[i]> largest)
+			{
+				second_largest= largest;
+				largest = arr[i];
+			}
+			if(arr[i]> second_largest && arr[i]!= largest)
+			{
+				second_largest = arr[i];
+				
+			}
+			
+		}
+		int average = (largest+second_largest)/2;
+		System.out.println(largest);
+		System.out.println(	second_largest);
+		return average;
+		
+	}
+	
+	
+	public static void main (String args[])
+	{
+		int result = AverageOfLargestAndSecondLagestNumber .average();
+		System.out.println(result);
+		
+	}
+
+}
