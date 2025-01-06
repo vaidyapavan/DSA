@@ -1,0 +1,47 @@
+package Basic_DSA;
+
+public class String_Removal_perticular_letter {
+	
+	void LetterExtract()
+	{
+		
+		String str = "pavan@gmail.com";
+		StringBuilder new_str =  new StringBuilder();
+		
+		int count =0;
+		int n= str.length();
+		
+		for(int i=0; i<n;i++)
+		{
+			char ch = str.charAt(i);
+			if(ch!='@')
+			{
+				new_str.append(ch);
+				count++;
+			}
+			else
+			{
+				break;
+			}
+			
+		}
+		new_str.append(count);
+		
+		int length = new_str.length();
+		
+		for(int i=0;i<length;i++)
+		{
+			System.out.print(new_str.charAt(i));
+		}
+		
+		
+	}
+
+	public static void main(String[] args) {
+		String_Removal_perticular_letter obj = new String_Removal_perticular_letter();
+		obj.LetterExtract();
+		
+
+	}
+
+}
