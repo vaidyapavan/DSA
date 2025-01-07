@@ -1,0 +1,39 @@
+package Basic_DSA;
+
+import java.util.Scanner;
+
+public class Array_problem {
+	
+	
+	 static int findTotalSum(int arr[], int index)
+	{
+		int n = arr.length;
+	
+	
+		int sum =0;
+		for(int i=index;i<n;i++)
+		{
+			 int difference = Math.abs(arr[i]- arr[i-1]);
+			 sum = sum + difference; 
+		}
+		return sum;
+	}
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the size of the array");
+		int n = s.nextInt();
+		int nums[] = new int[n];
+		
+		for(int i=0;i<n;i++)
+		{
+			nums[i] = s.nextInt(); 
+		}
+		System.out.println("enter the array index");
+		int index = s.nextInt();
+		int result = Array_problem.findTotalSum(nums, index);
+		System.out.println(result);
+
+	}
+
+}
