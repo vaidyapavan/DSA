@@ -1,0 +1,43 @@
+package Basic_DSA;
+import java.util.*;
+import java.util.Scanner;
+
+public class total_no_of_possible_curtains {
+	
+	
+	 static int total_curtains(int arr[], int length)
+	{
+		 int n = arr.length;
+		 
+		 int sum=0;
+		 
+		 
+		 
+		 for(int i=0; i<n;i++)
+		 {
+			 int  count = arr[i]/length;
+			 sum = sum+count;
+		 }
+		return sum;
+		
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the size of the array");
+		int n = s.nextInt();
+		int nums[] = new int[n];
+		
+		for(int i=0;i<n;i++)
+		{
+			nums[i] = s.nextInt(); 
+		}
+		System.out.println("enter the length of the curtaind");
+		int length = s.nextInt();
+		int result = total_no_of_possible_curtains.total_curtains(nums, length);
+		System.out.println(result);
+
+	}
+
+}
