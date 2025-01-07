@@ -1,0 +1,55 @@
+package Basic_DSA;
+
+public class Checking_palindrone_string {
+	
+	 static boolean check()
+	{
+		String str = "babaar";
+		int n = str.length()-1;
+		
+		int start = 1;
+		int end = n;
+		boolean ispalindrone = true;
+		while(start< end)
+		{
+			if(str.charAt(start) != str.charAt(end)){
+				ispalindrone = false;
+				break;
+				
+				
+			}
+			start++;
+			end--;
+			
+		}
+		if(ispalindrone)
+		{
+			return true;
+			
+		}
+		else
+		{
+			return false;
+		}
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		 boolean result = Checking_palindrone_string.check();
+		 if(result ==true)
+		 {
+			 System.out.println("string is palindrone");
+			 
+			 
+		 }
+		 else
+		 {
+			 System.out.println("string is not  palindrone");
+		 }
+		
+
+	}
+
+}
