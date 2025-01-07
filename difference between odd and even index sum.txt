@@ -1,0 +1,48 @@
+package Basic_DSA;
+import java.util.*;
+public class Odd_even_index_difference {
+	
+	
+	 static int difference(int nums[], int n)
+	{
+		 int even_sum=0;
+		 int odd_sum=0;
+		 
+		 for(int i=0;i<n;i++)
+		 {
+			 
+			 if(i%2 == 0)
+			 {
+				 even_sum =  even_sum + nums[i];
+				
+				 
+			 }
+			 else
+			 {
+				 odd_sum = odd_sum +nums[i];
+			
+			 }
+		 }
+		
+		 
+		 int difference =even_sum - odd_sum;
+		return difference;
+	}
+	
+	public  static void main (String agrs[])
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the size of the array");
+		int n = s.nextInt();
+		int nums[] = new int[n];
+		
+		for(int i=0;i<n;i++)
+		{
+			nums[i] = s.nextInt(); 
+		}
+		 int result = Odd_even_index_difference.difference(nums, n);
+			System.out.println(result);
+		
+	}
+
+}
