@@ -1,0 +1,56 @@
+package Basic_DSA;
+import java.math.BigInteger;
+import java.util.ArrayList;
+public class Count_of_unique_numbers {
+	
+	
+	 static int count(int no)
+	{
+		 int unique_count=0;
+		 ArrayList <Integer> myarr = new ArrayList<>();
+		 ArrayList <Integer> visited = new ArrayList<>();
+ 		 
+		 while(no>0)
+		 {
+			 int last_digit = no%10;
+			 no= no/10;
+			 myarr.add(last_digit);
+			 
+			 
+		 }
+		 
+		 for(int i=0;i<myarr.size();i++)
+		 {
+			 int count =0;
+			 for(int j=i;j<myarr.size();j++)
+			 {
+				 if(myarr.get(i)==myarr.get(j))
+				 {
+					 
+					 
+					 count++;
+				 }
+				 
+			 }
+			 if(count> 1 && !visited.contains(myarr.get(i)) )
+			 {
+				 unique_count++;
+				 visited.add(myarr.get(i));
+			 }
+		 }
+		 
+		 
+
+		 return unique_count;
+	
+	}
+
+	public static void main(String[] args) {
+		int no=1213422;
+		int result = Count_of_unique_numbers.count(no);
+		System.out.println(result);
+		
+
+	}
+
+}
