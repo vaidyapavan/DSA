@@ -1,0 +1,36 @@
+package Basic_DSA;
+import java.util.*;
+
+public class Right_shift_element_by_k {
+	
+	
+	 static void Rightshift()
+	{
+		int arr[]= {1,5,3,2,7,8};
+		
+		int n= arr.length;
+		int new_arr[] = new int[n];
+		 
+		
+		int k=3;
+		
+		for(int i=0;i<n;i++)
+		{
+			int index = (i+k)%n;
+			  new_arr[index] =arr[i];
+
+		}
+		for(int i=0;i<n;i++)
+		{
+			System.out.print(new_arr[i]+" ");
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		Right_shift_element_by_k.Rightshift();
+		
+
+	}
+
+}
