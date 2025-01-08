@@ -1,0 +1,22 @@
+package Basic_DSA;
+import java.util.*;
+
+public class squareRoot_Rounding_off {
+	 static double squareRoot()
+	{
+		int no=31;
+		double result = Math.sqrt(no);
+		return result;
+	}
+	
+	
+
+	public static void main(String[] args) {
+		int ans =(int) squareRoot_Rounding_off.squareRoot();
+		System.out.println(ans);
+		
+		
+
+	}
+
+}
