@@ -1,0 +1,19 @@
+package Basic_DSA;
+import java.util.*;
+
+public class Sum_of_maximum_energy {
+
+	public static void main(String[] args) {
+		int arr[]= {9,-3,8,-6,-7,8,10};
+		int n=7;
+		Arrays.sort(arr);
+		int max= arr[n-1];
+		int second_max=arr[n-2];
+		int maximun_energy_sum = max+second_max;
+		System.out.println(maximun_energy_sum);
+		
+		
+
+	}
+
+}
