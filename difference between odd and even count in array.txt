@@ -1,0 +1,40 @@
+package Basic_DSA;
+import java.util.*;
+
+public class difference_between_odd_even_numbers {
+	
+	static int  count(int n ,int arr[])
+	{
+		
+		int odd_count = 0;
+		int even_count= 0;
+		for(int i=0; i<n;i++)
+		{
+			if(arr[i] %2 ==0)
+			{
+				even_count++;
+			}
+			else
+			{
+				odd_count++;
+			}
+		}
+		int difference = odd_count - even_count;
+		return difference;
+	}
+	public static void main(String args[])
+	{
+		Scanner s = new Scanner(System.in);
+		int n= s.nextInt();
+		
+		int arr[] = new int[n];
+		for(int i=0;i<n;i++)
+		{
+			arr[i] = s.nextInt();
+		}
+		int result  = difference_between_odd_even_numbers.count(n ,arr);
+		System.out.println(result);
+		
+	}
+
+}
