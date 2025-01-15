@@ -1,0 +1,28 @@
+package Basic_DSA;
+import java.util.*;
+public class Checking_perfect_sqaure_number {
+	static void check(int no)
+	{
+		int result = (int) Math.sqrt(no);
+		
+		
+		if(result*result == no)
+		{
+			System.out.println("no is perfect square no");
+		}
+		else
+		{
+			System.out.println("no is not perfect square no");
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int no = s.nextInt();
+		
+		Checking_perfect_sqaure_number.check(no);
+
+	}
+
+}
